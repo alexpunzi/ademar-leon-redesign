@@ -1,0 +1,494 @@
+/* ==========================================================================
+   NEXO | ABANCA Ademar León - Rediseño Conceptual
+   Archivo: components.css
+   Propósito: Estilos visuales de componentes reutilizables, micro-layouts 
+              y estados de interacción. (Sin media queries)
+   ========================================================================== */
+
+/* ==========================================================================
+   A. BOTONES
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 0; /* Estética rectangular y contundente */
+  cursor: pointer;
+  border: 1px solid transparent;
+  /* Transiciones específicas en lugar de 'all' por rendimiento y control */
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast),
+              border-color var(--transition-fast);
+}
+
+.btn-primary {
+  background-color: var(--color-brand-blue);
+  color: var(--color-text-light);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: var(--color-text-light);
+  color: var(--color-bg-main);
+}
+
+.btn-secondary {
+  background-color: var(--color-bg-darker);
+  color: var(--color-text-light);
+  border-color: var(--color-bg-darker);
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  background-color: transparent;
+  border-color: var(--color-text-light);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-text-light);
+  border-color: var(--color-text-muted);
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+  border-color: var(--color-text-light);
+  background-color: var(--color-text-light);
+  color: var(--color-bg-main);
+}
+
+.btn-outline-light {
+  background-color: transparent;
+  color: var(--color-text-light);
+  border-color: var(--color-text-light);
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:active {
+  background-color: var(--color-text-light);
+  color: var(--color-bg-main);
+}
+
+/* Accesibilidad explícita para botones */
+.btn:focus-visible {
+  outline: 2px solid var(--color-brand-blue);
+  outline-offset: 4px;
+}
+
+/* ==========================================================================
+   B. NAVEGACIÓN
+   ========================================================================== */
+
+.nav-list {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.nav-list a {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-light);
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color var(--transition-fast);
+}
+
+.nav-list a:hover,
+.nav-list a.is-active {
+  color: var(--color-brand-blue);
+}
+
+/* Indicador de hover estilo editorial (línea inferior) */
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-brand-blue);
+  transition: width var(--transition-fast);
+}
+
+.nav-list a:hover::after,
+.nav-list a.is-active::after {
+  width: 100%;
+}
+
+.view-all-link {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-brand-blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap var(--transition-fast), color var(--transition-fast);
+}
+
+.view-all-link:hover {
+  color: var(--color-text-light);
+  gap: 0.75rem; /* Efecto microinteracción flecha */
+}
+
+/* Botón menú móvil (Posicionamiento absoluto para pseudoelementos) */
+.mobile-menu-toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.mobile-menu-toggle:focus-visible {
+  outline: 2px solid var(--color-brand-blue);
+  outline-offset: 2px;
+}
+
+.menu-icon {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text-light);
+  transition: background-color var(--transition-fast);
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text-light);
+  transition: transform var(--transition-fast);
+}
+
+.menu-icon::before {
+  top: -8px;
+}
+
+.menu-icon::after {
+  top: 8px;
+}
+
+/* ==========================================================================
+   C. ETIQUETAS Y BADGES
+   ========================================================================== */
+
+.hero-subtitle,
+.news-category,
+.match-competition {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-brand-blue);
+  margin-bottom: var(--space-xs);
+}
+
+/* Variación específica para destacar competiciones */
+.match-competition {
+  padding: 0.25rem 0.75rem;
+  background-color: var(--color-bg-darker);
+  border-left: 2px solid var(--color-brand-blue);
+}
+
+/* ==========================================================================
+   D. TARJETAS (Estilo Editorial, sin bordes redondeados ni sombras)
+   ========================================================================== */
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.news-link {
+  display: block;
+  color: inherit;
+  outline: none;
+}
+
+.news-link:focus-visible {
+  outline: 2px solid var(--color-brand-blue);
+  outline-offset: 4px;
+}
+
+.news-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-bg-darker);
+  width: 100%;
+}
+
+.news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+/* Proporciones de imagen */
+.featured-news .news-image-wrapper {
+  aspect-ratio: 4 / 3;
+}
+
+.secondary-news .news-image-wrapper {
+  aspect-ratio: 16 / 9;
+}
+
+.news-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.news-headline {
+  margin-bottom: var(--space-xs);
+  transition: color var(--transition-fast);
+}
+
+.news-date {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-top: auto;
+  padding-top: var(--space-xs);
+}
+
+/* ==========================================================================
+   E. COMPONENTES DEPORTIVOS (Con modificadores de estado)
+   ========================================================================== */
+
+.match-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
+  border-top: 1px solid rgba(133, 141, 154, 0.2);
+  border-bottom: 1px solid rgba(133, 141, 154, 0.2);
+  margin-bottom: var(--space-md);
+  transition: border-color var(--transition-fast);
+}
+
+.match-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-sm);
+}
+
+.team-shield {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  /* Sombra eliminada para un aspecto más limpio y plano */
+}
+
+.team-name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.match-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-xs);
+}
+
+.match-status {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  margin: var(--space-xs) 0;
+  transition: color var(--transition-fast);
+}
+
+.match-date,
+.match-venue {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.match-date {
+  font-weight: 700;
+  color: var(--color-text-light);
+}
+
+/* Modificadores de Estado del Partido */
+
+/* Estado por defecto (Próximo partido - .is-upcoming) */
+.match-card.is-upcoming .match-status {
+  color: var(--color-brand-blue);
+}
+
+/* Partido en directo (.is-live) */
+.match-card.is-live {
+  border-color: rgba(239, 68, 68, 0.4); /* Acento sutil en los bordes */
+}
+.match-card.is-live .match-status {
+  color: var(--color-live); /* Rojo alerta estandarizado para eventos en vivo */
+}
+.match-card.is-live .match-date {
+  color: var(--color-live);
+}
+
+/* Partido finalizado (.is-finished) */
+.match-card.is-finished {
+  opacity: 0.8;
+}
+.match-card.is-finished .match-status {
+  color: var(--color-text-light);
+}
+.match-card.is-finished .match-date {
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   F. ELEMENTOS DECORATIVOS
+   ========================================================================== */
+
+/* Cabeceras de sección con acento geométrico */
+.section-header {
+  margin-bottom: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-header.align-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.section-heading {
+  position: relative;
+  padding-bottom: var(--space-sm);
+}
+
+/* Línea de acento bajo los titulares de sección */
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-brand-blue);
+}
+
+.section-header.align-left .section-heading::after {
+  left: 0;
+  transform: none;
+}
+
+/* Listas del Footer */
+.footer-list,
+.legal-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.footer-list a,
+.legal-list a {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  outline: none;
+}
+
+.footer-list a:hover,
+.legal-list a:hover {
+  color: var(--color-text-light);
+}
+
+.footer-list a:focus-visible,
+.legal-list a:focus-visible {
+  color: var(--color-text-light);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.social-list {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.social-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-text-muted);
+  border-radius: 0;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  outline: none;
+}
+
+.social-list a:focus-visible {
+  outline: 2px solid var(--color-brand-blue);
+  outline-offset: 4px;
+}
+
+.social-list a:hover {
+  border-color: var(--color-text-light);
+  background-color: var(--color-text-light);
+}
+
+/* Solución para iconos monocromáticos: forzar silueta negra en lugar de invertir colores.
+   Así funciona correctamente si el SVG original era blanco o de color. */
+.social-list a img {
+  transition: filter var(--transition-fast);
+}
+
+.social-list a:hover img {
+  filter: brightness(0);
+}
+
+/* ==========================================================================
+   G. INTERACCIONES Y MICRO-ANIMACIONES
+   ========================================================================== */
+
+/* Efecto hover editorial en noticias */
+.news-link:hover .news-image {
+  transform: scale(1.03); /* Zoom sutil fotográfico */
+}
+
+.news-link:hover .news-headline {
+  color: var(--color-brand-blue);
+}
