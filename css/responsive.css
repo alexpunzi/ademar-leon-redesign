@@ -72,8 +72,37 @@
 /* Mobile & Tablet (Hasta 1199px) - Gestión de visibilidad del menú */
 @media (max-width: 1199px) {
   .main-nav {
-    display: none; /* Se oculta a la espera de ser activado por JS */
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background-color: rgba(8, 13, 22, 0.98);
+    border-bottom: 1px solid rgba(133, 141, 154, 0.2);
+    padding: var(--space-md) var(--container-padding);
+    display: none;
   }
+
+  .main-nav.is-open {
+    display: block;
+  }
+
+  .main-nav .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .main-nav .nav-list a {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+  }
+}
+
+/* Bloqueo de scroll cuando el menú móvil o modal están abiertos */
+body.has-overlay-open {
+  overflow: hidden;
 }
 
 /* Desktop (1200px en adelante) */

@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Rediseño conceptual del sitio web del ABANCA Ademar León, creado por el estudio NEXO.">
-    <!-- Ajuste 2: Theme color acorde a Midnight Navy -->
     <meta name="theme-color" content="#101827">
     
-    <!-- Ajuste 1: Title actualizado -->
     <title>ABANCA Ademar León | Rediseño Conceptual por NEXO</title>
 
     <!-- Tipografías: Barlow Condensed (Titulares) e Inter (Textos) -->
@@ -15,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,900;1,900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Referencias a los futuros archivos CSS -->
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -27,13 +25,10 @@
     =========================================== -->
     <header class="site-header">
         <div class="header-container">
-            <!-- Logo del Club -->
-            <a href="index.html" class="logo-link" aria-label="Volver a la página de inicio">
-                <!-- Imagen del header sin lazy loading por estar "above the fold" -->
+            <a href="#hero" class="logo-link" aria-label="Volver al inicio">
                 <img src="assets/images/logo.png" alt="Escudo oficial del ABANCA Ademar León" class="site-logo" width="120" height="60">
             </a>
 
-            <!-- Navegación Principal (Ajuste 3: ID añadido) -->
             <nav id="main-navigation" class="main-nav" aria-label="Navegación principal">
                 <ul class="nav-list">
                     <li><a href="#hero">Inicio</a></li>
@@ -44,10 +39,8 @@
                 </ul>
             </nav>
 
-            <!-- Acciones Header (CTA) -->
             <div class="header-actions">
-                <a href="#" class="btn btn-primary">Comprar Entradas</a>
-                <!-- Botón para menú móvil (Ajuste 3: aria-controls y aria-expanded) -->
+                <a href="#" class="btn btn-primary" data-integration="ticketing">Comprar Entradas</a>
                 <button type="button" class="mobile-menu-toggle" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menú de navegación">
                     <span class="menu-icon" aria-hidden="true"></span>
                 </button>
@@ -59,14 +52,13 @@
          CONTENIDO PRINCIPAL
     =========================================== -->
     <main>
-
         <!-- 1. HERO SECTION -->
         <section id="hero" class="hero-section" aria-labelledby="hero-title">
             <div class="hero-image-wrapper">
-                <!-- Imagen hero: sin lazy loading y con dimensiones base -->
                 <img src="assets/images/hero-background.jpg" alt="Jugador del Ademar León lanzando" class="hero-bg-image" width="1920" height="1080">
             </div>
-            <div class="hero-content">
+
+            <div class="hero-content" data-reveal>
                 <span class="hero-subtitle">ABANCA Ademar León</span>
                 <h1 id="hero-title" class="hero-heading">NUESTRA PISTA.<br>NUESTRAS REGLAS.</h1>
                 <p class="hero-description">Siente la pasión del balonmano en estado puro. Acompaña al equipo en una nueva temporada histórica.</p>
@@ -79,85 +71,86 @@
 
         <!-- 2. PRÓXIMO PARTIDO -->
         <section id="next-match" class="match-section" aria-labelledby="match-title">
-            <div class="section-container">
+            <div class="section-container" data-reveal>
                 <header class="section-header">
                     <h2 id="match-title" class="section-heading">Próximo Partido</h2>
-                    <span class="match-competition"ASOBAL - Jornada 9</span>
+                    <span class="match-competition">ASOBAL - Jornada 9</span>
                 </header>
 
-                <div class="match-card">
+                <div class="match-card is-upcoming" data-match-card>
                     <div class="match-team team-local">
-                        <img src="assets/images/logo-torrelavega.png" alt="Escudo ABANCA Ademar León" class="team-shield" width="80" height="80" loading="lazy">
+                        <img src="assets/images/logo-torrelavega.png" alt="Escudo Bathco BM Torrelavega" class="team-shield" width="80" height="80" loading="lazy">
                         <h3 class="team-name">Bathco BM Torrelavega</h3>
                     </div>
                     
                     <div class="match-details">
-                        <time datetime="202X-XX-XXT19:00" class="match-date">Sábado - 14 noviembre 2026 - 17:00</time>
+                        <time datetime="2026-11-14T17:00:00+01:00" class="match-date">Sábado - 14 noviembre 2026 - 17:00</time>
                         <span class="match-venue">Pabellón Municipal Vicente Trueba</span>
-                        <div class="match-status">VS</div>
+                        <div class="match-status" aria-live="polite">VS</div>
+                        <div class="match-countdown" data-countdown aria-label="Cuenta atrás para el inicio del partido"></div>
                     </div>
 
                     <div class="match-team team-visitor">
-                        <img src="assets/images/logo.png" alt="Escudo del equipo rival" class="team-shield" width="80" height="80" loading="lazy">
+                        <img src="assets/images/logo.png" alt="Escudo ABANCA Ademar León" class="team-shield" width="80" height="80" loading="lazy">
                         <h3 class="team-name">ABANCA Ademar León</h3>
                     </div>
                 </div>
 
                 <div class="match-actions">
-                    <a href="#" class="btn btn-primary">Entradas disponibles</a>
-                    <a href="#" class="btn btn-outline">Leer la previa</a>
+                    <a href="#" class="btn btn-primary" data-integration="ticketing">Entradas disponibles</a>
+                    <a href="#" class="btn btn-outline" data-integration="match-preview">Leer la previa</a>
                 </div>
             </div>
         </section>
 
         <!-- 3. ÚLTIMAS NOTICIAS (Diseño Editorial) -->
         <section id="news" class="news-section" aria-labelledby="news-title">
-            <div class="section-container">
+            <div class="section-container" data-reveal>
                 <header class="section-header align-left">
                     <h2 id="news-title" class="section-heading">Actualidad</h2>
-                    <a href="#" class="view-all-link">Ver todas las noticias &rarr;</a>
+                    <a href="#" class="view-all-link" data-integration="news-archive">Ver todas las noticias &rarr;</a>
                 </header>
 
                 <div class="news-grid">
                     <!-- Noticia Principal (Destacada) -->
                     <article class="news-card featured-news">
-                        <a href="#" class="news-link">
+                        <a href="#" class="news-link" data-integration="news-article">
                             <figure class="news-image-wrapper">
-                                <img src="assets/images/news-placeholder-1.jpg" alt="Jugadores del Ademar León en un tiempo muerto durante el partido" class="news-image" width="800" height="600" loading="lazy">
+                                <img src="assets/images/" alt="Jugadores del Ademar León en un tiempo muerto durante el partido" class="news-image" width="800" height="600" loading="lazy">
                             </figure>
                             <div class="news-content">
                                 <span class="news-category">Primer Equipo</span>
-                                <h3 class="news-headline">[Titular Provisional de la Noticia Principal, máximo impacto y relevancia]</h3>
-                                <p class="news-excerpt">[Breve resumen provisional que acompaña a la noticia principal, dando contexto al titular y atrayendo al lector para hacer clic y leer más...]</p>
-                                <time datetime="202X-XX-XX" class="news-date">[DD de Mes, 202X]</time>
+                                <h3 class="news-headline">El ABANCA Ademar presenta su nueva piel</h3>
+                                <p class="news-excerpt">El ABANCA Ademar León ya tiene la piel con la que afrontará una temporada muy especial. El club presentó este jueves, 20 de agosto, sus nuevas equipaciones para la campaña 2026/27 en un acto celebrado en la sexta planta de El Corte Inglés de León, que reunió a jugadores, representantes del club, colaboradores y numerosos aficionados ademaristas.</p>
+                                <time datetime="2026-11-12" class="news-date">21 de agosto, 2026</time>
                             </div>
                         </a>
                     </article>
 
                     <!-- Noticia Secundaria 1 -->
                     <article class="news-card secondary-news">
-                        <a href="#" class="news-link">
+                        <a href="#" class="news-link" data-integration="news-article">
                             <figure class="news-image-wrapper">
                                 <img src="assets/images/news-placeholder-2.jpg" alt="Entrenamiento del primer equipo en el Palacio de los Deportes" class="news-image" width="600" height="400" loading="lazy">
                             </figure>
                             <div class="news-content">
                                 <span class="news-category">Club</span>
                                 <h3 class="news-headline">[Titular Provisional para noticia secundaria sobre actualidad del club]</h3>
-                                <time datetime="202X-XX-XX" class="news-date">[DD de Mes, 202X]</time>
+                                <time datetime="2026-11-11" class="news-date">[DD de Mes, 202X]</time>
                             </div>
                         </a>
                     </article>
 
                     <!-- Noticia Secundaria 2 -->
                     <article class="news-card secondary-news">
-                        <a href="#" class="news-link">
+                        <a href="#" class="news-link" data-integration="news-article">
                             <figure class="news-image-wrapper">
                                 <img src="assets/images/news-placeholder-3.jpg" alt="Rueda de prensa del entrenador del Ademar León" class="news-image" width="600" height="400" loading="lazy">
                             </figure>
                             <div class="news-content">
                                 <span class="news-category">Declaraciones</span>
                                 <h3 class="news-headline">[Titular Provisional para declaraciones o previa del próximo encuentro]</h3>
-                                <time datetime="202X-XX-XX" class="news-date">[DD de Mes, 202X]</time>
+                                <time datetime="2026-11-10" class="news-date">[DD de Mes, 202X]</time>
                             </div>
                         </a>
                     </article>
@@ -167,12 +160,13 @@
 
         <!-- 4. EL CLUB -->
         <section id="club" class="club-section" aria-labelledby="club-title">
-            <div class="club-layout">
+            <div class="club-layout" data-reveal>
                 <div class="club-text-content">
                     <h2 id="club-title" class="section-heading">Más que un equipo, la identidad de León</h2>
                     <p class="club-description">Décadas de historia forjadas en la exigencia, el coraje y el talento. El ABANCA Ademar León es un referente indiscutible del balonmano nacional y europeo.</p>
-                    <a href="#" class="btn btn-outline-light">Conoce nuestra historia</a>
+                    <a href="#" class="btn btn-outline-light" data-integration="club-history">Conoce nuestra historia</a>
                 </div>
+
                 <div class="club-image-gallery">
                     <img src="assets/images/club-history-placeholder-1.jpg" alt="Imagen histórica del equipo levantando un trofeo" class="gallery-img img-main" width="600" height="800" loading="lazy">
                     <img src="assets/images/club-history-placeholder-2.jpg" alt="Detalle del balón oficial en la pista" class="gallery-img img-secondary" width="400" height="300" loading="lazy">
@@ -185,16 +179,16 @@
             <div class="fans-bg-wrapper">
                 <img src="assets/images/fans-background.jpg" alt="Grada del Palacio de los Deportes llena de aficionados animando" class="fans-bg" width="1920" height="1080" loading="lazy">
             </div>
-            <div class="fans-content">
+
+            <div class="fans-content" data-reveal>
                 <h2 id="fans-title" class="section-heading">El jugador número ocho</h2>
                 <p class="fans-description">Nuestra grada es el alma del Palacio. Únete a la familia ademarista y empuja al equipo hacia la victoria en cada partido.</p>
                 <div class="fans-actions">
-                    <a href="#" class="btn btn-primary">Hazte Socio</a>
-                    <a href="#" class="btn btn-secondary">Peñas Oficiales</a>
+                    <a href="#" class="btn btn-primary" data-integration="membership">Hazte Socio</a>
+                    <a href="#" class="btn btn-secondary" data-integration="supporters">Peñas Oficiales</a>
                 </div>
             </div>
         </section>
-
     </main>
 
     <!-- ==========================================
@@ -202,7 +196,6 @@
     =========================================== -->
     <footer class="site-footer">
         <div class="footer-container">
-            
             <div class="footer-brand">
                 <img src="assets/images/logo-ademar-monochrome.svg" alt="Logo ABANCA Ademar León monocromo" class="footer-logo" width="120" height="60" loading="lazy">
                 <p class="footer-slogan">Lucha. Pasión. Ademar.</p>
@@ -211,34 +204,34 @@
             <div class="footer-links-group">
                 <h4 class="footer-heading">Club</h4>
                 <ul class="footer-list">
-                    <li><a href="#">Historia</a></li>
-                    <li><a href="#">Plantilla</a></li>
-                    <li><a href="#">Cuerpo Técnico</a></li>
-                    <li><a href="#">Instalaciones</a></li>
+                    <li><a href="#" data-integration="club-page">Historia</a></li>
+                    <li><a href="#" data-integration="club-page">Plantilla</a></li>
+                    <li><a href="#" data-integration="club-page">Cuerpo Técnico</a></li>
+                    <li><a href="#" data-integration="club-page">Instalaciones</a></li>
                 </ul>
             </div>
 
             <div class="footer-links-group">
                 <h4 class="footer-heading">Servicios</h4>
                 <ul class="footer-list">
-                    <li><a href="#">Abonos y Entradas</a></li>
-                    <li><a href="#">Tienda Oficial</a></li>
-                    <li><a href="#">Cantera</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#" data-integration="ticketing">Abonos y Entradas</a></li>
+                    <li><a href="#" data-integration="store">Tienda Oficial</a></li>
+                    <li><a href="#" data-integration="academy">Cantera</a></li>
+                    <li><a href="#" data-integration="contact">Contacto</a></li>
                 </ul>
             </div>
 
             <div class="footer-social">
                 <h4 class="footer-heading">Síguenos</h4>
                 <ul class="social-list">
-                    <li><a href="#" aria-label="Perfil oficial en Twitter / X">
-                        <img src="assets/icons/icon-twitter.svg" alt="Icono Twitter" aria-hidden="true" width="24" height="24" loading="lazy">
+                    <li><a href="#" data-integration="social" aria-label="Perfil oficial en Twitter / X">
+                        <img src="assets/icons/icon-twitter.svg" alt="" aria-hidden="true" width="24" height="24" loading="lazy">
                     </a></li>
-                    <li><a href="#" aria-label="Perfil oficial en Instagram">
-                        <img src="assets/icons/icon-instagram.svg" alt="Icono Instagram" aria-hidden="true" width="24" height="24" loading="lazy">
+                    <li><a href="#" data-integration="social" aria-label="Perfil oficial en Instagram">
+                        <img src="assets/icons/icon-instagram.svg" alt="" aria-hidden="true" width="24" height="24" loading="lazy">
                     </a></li>
-                    <li><a href="#" aria-label="Canal oficial en YouTube">
-                        <img src="assets/icons/icon-youtube.svg" alt="Icono YouTube" aria-hidden="true" width="24" height="24" loading="lazy">
+                    <li><a href="#" data-integration="social" aria-label="Canal oficial en YouTube">
+                        <img src="assets/icons/icon-youtube.svg" alt="" aria-hidden="true" width="24" height="24" loading="lazy">
                     </a></li>
                 </ul>
             </div>
@@ -246,22 +239,37 @@
 
         <div class="footer-bottom">
             <div class="footer-legal">
-                <p>&copy; 202X ABANCA Ademar León. Todos los derechos reservados.</p>
+                <p>&copy; <span data-current-year>2026</span> ABANCA Ademar León. Todos los derechos reservados.</p>
                 <ul class="legal-list">
-                    <li><a href="#">Aviso Legal</a></li>
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="#" data-integration="legal">Aviso Legal</a></li>
+                    <li><a href="#" data-integration="legal">Política de Privacidad</a></li>
+                    <li><a href="#" data-integration="legal">Política de Cookies</a></li>
                 </ul>
             </div>
             
             <!-- Firma de NEXO -->
             <div class="footer-credits">
-                <p>Diseño y desarrollo por <a href="#" target="_blank" rel="noopener noreferrer">NEXO</a>. Beyond the game.</p>
+                <p>Diseño y desarrollo por <a href="#hero">NEXO</a>. Beyond the game.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Referencia al futuro archivo JavaScript -->
+    <!-- Modal Editorial para enlaces pendientes de integración externa -->
+    <div id="nexo-info-modal" class="nexo-modal" role="dialog" aria-modal="true" aria-labelledby="nexo-modal-title" hidden>
+        <div class="nexo-modal-backdrop" data-modal-close></div>
+        <div class="nexo-modal-dialog">
+            <div class="nexo-modal-header">
+                <span class="nexo-modal-tag">NEXO // MÓDULO EN INTEGRACIÓN</span>
+                <button type="button" class="nexo-modal-close" data-modal-close aria-label="Cerrar ventana informativa">&times;</button>
+            </div>
+            <h3 id="nexo-modal-title" class="nexo-modal-title">Sección disponible próximamente</h3>
+            <p id="nexo-modal-body" class="nexo-modal-body"></p>
+            <div class="nexo-modal-actions">
+                <button type="button" class="btn btn-primary" data-modal-close>Entendido</button>
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js" defer></script>
 </body>
 </html>

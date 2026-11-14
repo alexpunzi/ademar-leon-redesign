@@ -492,3 +492,174 @@
 .news-link:hover .news-headline {
   color: var(--color-brand-blue);
 }
+
+/* ==========================================================================
+   H. ESTADOS DINÁMICOS Y MÓDULOS JS (NEXO)
+   ========================================================================== */
+
+/* Estado de header al hacer scroll */
+.site-header {
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.site-header.is-scrolled {
+  background-color: rgba(8, 13, 22, 0.98);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Animación botón hamburguesa -> X */
+.mobile-menu-toggle[aria-expanded="true"] .menu-icon {
+  background-color: transparent;
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .menu-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.mobile-menu-toggle[aria-expanded="true"] .menu-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* Cuenta atrás del próximo partido */
+.match-countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: var(--space-xs);
+  padding: 0.4rem 0.9rem;
+  background-color: var(--color-bg-darker);
+  border: 1px solid rgba(133, 141, 154, 0.25);
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+}
+
+.match-countdown[hidden] {
+  display: none;
+}
+
+.countdown-unit {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.countdown-value {
+  color: var(--color-brand-blue);
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.countdown-sep {
+  color: rgba(133, 141, 154, 0.4);
+}
+
+/* Animaciones de aparición progresiva (Intersection Observer) */
+.js-enabled [data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--transition-smooth), transform var(--transition-smooth);
+}
+
+.js-enabled [data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-enabled [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Modal editorial para integraciones externas */
+.nexo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm);
+}
+
+.nexo-modal[hidden] {
+  display: none;
+}
+
+.nexo-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(8, 13, 22, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+.nexo-modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 520px;
+  background-color: var(--color-bg-main);
+  border: 1px solid rgba(133, 141, 154, 0.25);
+  border-top: 4px solid var(--color-brand-blue);
+  padding: var(--space-md);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+}
+
+.nexo-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.nexo-modal-tag {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-brand-blue);
+}
+
+.nexo-modal-close {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.nexo-modal-close:hover {
+  color: var(--color-text-light);
+}
+
+.nexo-modal-title {
+  margin-bottom: var(--space-xs);
+}
+
+.nexo-modal-body {
+  margin-bottom: var(--space-md);
+  color: var(--color-text-muted);
+}
+
+.nexo-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
