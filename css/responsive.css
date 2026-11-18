@@ -67,8 +67,8 @@
   }
 }
 
-/* Mobile & Tablet (Hasta 1199px) - Gestión de visibilidad del menú */
-@media (max-width: 1199px) {
+/* Móvil y tablet compacta (hasta 900px) - Gestión del menú */
+@media (max-width: 900px) {
   .main-nav {
     position: fixed;
     top: 88px;
@@ -104,17 +104,26 @@ body.has-overlay-open {
   overflow: hidden;
 }
 
-/* Desktop (1200px en adelante) */
-@media (min-width: 1200px) {
-  .header-container {
-    height: 104px; /* Expansión para dar aire al escudo oficial */
-  }
+/* Escritorio compacto: navegación completa desde el ancho de portátil */
+@media (min-width: 901px) {
   .mobile-menu-toggle {
     display: none; /* Ocultamos explícitamente el botón toggle en escritorio */
   }
   .main-nav {
     display: block; /* Revelamos la navegación principal */
   }
+}
+
+/* Escritorio amplio */
+@media (min-width: 1200px) {
+  .site-header,
+  .header-container {
+    height: 104px;
+  }
+}
+
+.site-header.is-scrolled .header-container {
+  height: 72px;
 }
 
 /* ==========================================================================

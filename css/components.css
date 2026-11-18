@@ -120,6 +120,18 @@
   transition: max-height var(--transition-smooth);
 }
 
+.footer-logo-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-logo {
+  display: block;
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
 .site-header.is-scrolled .site-logo {
   max-height: 56px;
 }

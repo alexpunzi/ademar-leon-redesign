@@ -133,9 +133,17 @@ body {
 /* Layout de Revista */
 .magazine-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: var(--gutter);
 }
+
+.magazine-grid > * {
+  min-width: 0;
+}
+
+.span-4 { grid-column: span 4; }
+.span-6 { grid-column: span 6; }
+.span-8 { grid-column: span 8; }
 
 .section-padding {
   padding: 10rem 0;
