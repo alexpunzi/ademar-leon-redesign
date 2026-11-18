@@ -12,7 +12,7 @@
   --color-bg-darker: #080D16;    /* Negro profundo */
   --color-brand-blue: #174B91;   /* Ademar Blue */
   --color-text-light: #F4F5F7;   /* Off White */
-  --color-text-muted: #858D9A;   /* Steel Grey */
+  --color-text-muted: #9CA3AF;   /* Steel Grey - Adjusted for contrast */
   --color-live: #ef4444;
 
   /* Tipografías */
@@ -109,6 +109,30 @@ select {
 /* ==========================================================================
    TIPOGRAFÍA BASE (Estética Editorial Deportiva)
    ========================================================================== */
+
+/* Selección de texto personalizada */
+::selection {
+  background-color: var(--color-brand-blue);
+  color: var(--color-text-light);
+}
+
+/* Scrollbar personalizado para estética dark premium */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #253347;
+  border: 2px solid var(--color-bg-darker);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-blue);
+}
 
 h1,
 h2,

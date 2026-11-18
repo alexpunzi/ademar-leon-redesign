@@ -85,8 +85,44 @@
 }
 
 /* ==========================================================================
-   B. NAVEGACIÓN
+   B. NAVEGACIÓN (Estética NEXO | Beyond the Game)
    ========================================================================== */
+
+.site-header {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg-darker);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform var(--transition-smooth), 
+              background-color var(--transition-smooth),
+              height var(--transition-smooth);
+}
+
+.site-header.is-scrolled {
+  height: 72px;
+  background-color: rgba(8, 13, 22, 0.98);
+  backdrop-filter: blur(20px);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-top: 8px; /* Aire superior para el escudo */
+}
+
+.site-logo {
+  height: 100%; /* El logo escala con el contenedor */
+  max-height: 80px; /* Tamaño máximo para evitar desproporción */
+  width: auto;
+  object-fit: contain;
+  transition: max-height var(--transition-smooth);
+}
+
+.site-header.is-scrolled .site-logo {
+  max-height: 56px;
+}
 
 .nav-list {
   display: flex;
@@ -97,35 +133,46 @@
 .nav-list a {
   font-family: var(--font-heading);
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   color: var(--color-text-light);
   position: relative;
   padding: 0.5rem 0;
-  transition: color var(--transition-fast);
+  display: inline-block;
+  /* Micro-interacción: desplazamiento vertical sutil con curva Emil Kowalski */
+  transition: transform var(--transition-smooth), 
+              color var(--transition-smooth);
 }
 
 .nav-list a:hover,
 .nav-list a.is-active {
   color: var(--color-brand-blue);
+  transform: translateY(-2px);
 }
 
-/* Indicador de hover estilo editorial (línea inferior) */
-.nav-list a::after {
+/* Indicador de sección activa (punto minimalista en lugar de línea) */
+.nav-list a.is-active::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
   background-color: var(--color-brand-blue);
-  transition: width var(--transition-fast);
+  border-radius: 50%;
 }
 
-.nav-list a:hover::after,
-.nav-list a.is-active::after {
-  width: 100%;
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.header-actions .btn-primary {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
 }
 
 .view-all-link {

@@ -44,16 +44,14 @@
   left: 0;
   width: 100%;
   z-index: 100;
-  background-color: rgba(16, 24, 39, 0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(133, 141, 154, 0.1);
 }
 
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px; /* Altura base hasta 1199px */
+  height: 88px; /* Altura base NEXO ajustada para el escudo */
+  transition: height var(--transition-smooth);
 }
 
 .header-actions {
@@ -73,10 +71,11 @@
 @media (max-width: 1199px) {
   .main-nav {
     position: fixed;
-    top: 72px;
+    top: 88px;
     left: 0;
     right: 0;
     background-color: rgba(8, 13, 22, 0.98);
+    backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(133, 141, 154, 0.2);
     padding: var(--space-md) var(--container-padding);
     display: none;
@@ -108,7 +107,7 @@ body.has-overlay-open {
 /* Desktop (1200px en adelante) */
 @media (min-width: 1200px) {
   .header-container {
-    height: 96px; /* Expansión del header en escritorio */
+    height: 104px; /* Expansión para dar aire al escudo oficial */
   }
   .mobile-menu-toggle {
     display: none; /* Ocultamos explícitamente el botón toggle en escritorio */
@@ -128,7 +127,7 @@ body.has-overlay-open {
   min-height: 100svh;
   display: flex;
   align-items: center;
-  padding-top: 72px; /* Sincronizado con la altura del header (hasta 1199px) */
+  padding-top: 88px; /* Sincronizado con la altura del header NEXO */
 }
 
 .hero-image-wrapper {
@@ -188,7 +187,7 @@ body.has-overlay-open {
 /* Ajuste específico de altura a partir de Desktop */
 @media (min-width: 1200px) {
   .hero-section {
-    padding-top: 96px; /* Sincronizado con la nueva altura del header */
+    padding-top: 104px; /* Sincronizado con la altura expandida del header */
   }
 }
 

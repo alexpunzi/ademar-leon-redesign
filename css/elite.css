@@ -1,0 +1,142 @@
+/* ==========================================================================
+   NEXO ELITE | ABANCA Ademar León
+   Archivo: elite.css
+   Propósito: Sistema de diseño radical para estética de revista deportiva top.
+   ========================================================================== */
+
+:root {
+  /* Paleta Radical */
+  --color-carbon: #0A0A0A;       /* Negro Carbón Puro */
+  --color-white: #FFFFFF;        /* Blanco Puro */
+  --color-red: #E21E26;          /* Rojo Ademar */
+  --color-blue: #174B91;         /* Azul Ademar */
+  --color-blue-accent: #3b82f6;  /* Azul UI para contraste en dark mode */
+  --color-red-accent: #f87171;   /* Rojo UI para contraste en dark mode */
+  --color-grey-dark: #1A1A1A;    /* Gris carbón suave */
+  
+  /* Tipografías Display & Radicales */
+  --font-display: 'Barlow Condensed', sans-serif; /* Se usará con font-stretch y tracking ajustado */
+  --font-body: 'Inter', sans-serif;
+
+  /* Sistema de Espaciados */
+  --space-unit: 1rem;
+  --gutter: 2rem;
+  
+  /* Sombras Duras (Hard Shadows) */
+  --shadow-hard: 8px 8px 0px rgba(0, 0, 0, 0.2);
+  --shadow-red: 8px 8px 0px var(--color-red);
+}
+
+/* Base Radical */
+body {
+  background-color: var(--color-carbon);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Selección de texto adaptada */
+.bg-white ::selection {
+  background-color: var(--color-carbon);
+  color: var(--color-white);
+}
+
+/* Utilidades de contraste para secciones claras */
+.bg-white {
+  background-color: var(--color-white);
+  color: var(--color-carbon);
+}
+
+.bg-white p {
+  color: #374151; /* Gray 700 para contraste AA en blanco */
+}
+
+.bg-white .text-title {
+  color: var(--color-carbon);
+}
+
+/* Refuerzo de contraste en navegación */
+.nav-list a:hover,
+.nav-list a.is-active {
+  color: var(--color-blue-accent); /* Usamos el acento para accesibilidad */
+}
+
+.nav-list a.is-active::after {
+  background-color: var(--color-blue-accent);
+}
+
+/* Tipografía Masiva */
+.text-huge {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(5rem, 15vw, 12rem);
+  line-height: 0.85;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  font-stretch: 110%;
+}
+
+.text-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+/* Componentes Radicales */
+.card-elite {
+  background: var(--color-grey-dark);
+  padding: var(--gutter);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-elite:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: var(--shadow-red);
+}
+
+.btn-elite {
+  display: inline-block;
+  background: var(--color-white);
+  color: var(--color-carbon);
+  padding: 1rem 2.5rem;
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background 0.2s ease-out, color 0.2s ease-out;
+}
+
+.btn-elite:hover {
+  background: var(--color-red);
+  color: var(--color-white);
+}
+
+/* Utilidades de color forzadas para contraste AA */
+.text-white { color: var(--color-white) !important; }
+
+/* Rojo adaptativo según el fondo */
+.text-red { color: #ff4d4d !important; } /* Para fondos oscuros */
+.bg-white .text-red { color: var(--color-red) !important; } /* Para fondos claros */
+
+.opacity-80 { opacity: 0.8; }
+.opacity-10 { opacity: 0.1; }
+
+/* Sombras y efectos */
+.shadow-red { box-shadow: 8px 8px 0px var(--color-red); }
+.shadow-blue { box-shadow: 8px 8px 0px var(--color-blue); }
+
+/* Layout de Revista */
+.magazine-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gutter);
+}
+
+.section-padding {
+  padding: 10rem 0;
+}

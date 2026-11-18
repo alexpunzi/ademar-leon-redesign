@@ -1,0 +1,23 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-11-18T21:20:47.665Z",
+        "reason": "Intentional choice for high readability and neutrality, complementing the strong Barlow Condensed display face."
+      },
+      {
+        "rule": "hard-offset-shadow",
+        "value": "*",
+        "files": [
+          "club.html"
+        ],
+        "createdAt": "2026-11-18T21:32:44.546Z",
+        "reason": "Intentional neobrutalist trophy shadow for the elite redesign."
+      }
+    ]
+  }
+}
