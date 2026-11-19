@@ -1,0 +1,177 @@
+{
+  "temporada": "2026/27",
+  "jornadaActual": 9,
+  "pabellonLocal": "Palacio Municipal de los Deportes de León",
+  "direccionLocal": "Av. del Ingeniero Sáenz de Miera, s/n · León",
+  "partidos": [
+    {
+      "id": "logrono-ademar-j10",
+      "jornada": 10,
+      "competicion": "Liga NEXUS ENERGÍA ASOBAL",
+      "fecha": "2026-11-21T19:00:00+01:00",
+      "local": "Dicorpebal Logroño La Rioja",
+      "visitante": "ABANCA Ademar León",
+      "escudoLocal": null,
+      "escudoVisitante": "assets/images/logo.png",
+      "pabellon": "Palacio de los Deportes de La Rioja",
+      "ciudad": "Logroño",
+      "estado": "proximo",
+      "marcador": null,
+      "cronica": "El ABANCA Ademar León visita a Dicorpebal Logroño La Rioja en la jornada 10 de Liga. La ficha se actualizará con el resultado y la crónica tras el encuentro.",
+      "acta": {
+        "arbitros": "Pendiente de publicación",
+        "exclusiones": "Pendiente de publicación",
+        "maximosGoleadores": "Pendiente de publicación"
+      }
+    },
+    {
+      "id": "ademar-granollers-j11",
+      "jornada": 11,
+      "competicion": "Liga NEXUS ENERGÍA ASOBAL",
+      "fecha": "2026-11-28T19:00:00+01:00",
+      "local": "ABANCA Ademar León",
+      "visitante": "Fraikin BM. Granollers",
+      "escudoLocal": "assets/images/logo.png",
+      "escudoVisitante": null,
+      "pabellon": "Palacio Municipal de los Deportes de León",
+      "ciudad": "León",
+      "estado": "proximo",
+      "marcador": null,
+      "cronica": "La jornada 11 lleva al Fraikin BM. Granollers al Palacio Municipal de los Deportes.",
+      "acta": {
+        "arbitros": "Pendiente de publicación",
+        "exclusiones": "Pendiente de publicación",
+        "maximosGoleadores": "Pendiente de publicación"
+      }
+    },
+    {
+      "id": "ademar-puente-genil-j12",
+      "jornada": 12,
+      "competicion": "Liga NEXUS ENERGÍA ASOBAL",
+      "fecha": "2026-12-05T18:00:00+01:00",
+      "local": "ABANCA Ademar León",
+      "visitante": "Cajasol Ángel Ximénez Puente Genil",
+      "escudoLocal": "assets/images/logo.png",
+      "escudoVisitante": null,
+      "pabellon": "Palacio Municipal de los Deportes de León",
+      "ciudad": "León",
+      "estado": "proximo",
+      "marcador": null,
+      "cronica": "Partido de la jornada 12 en el Palacio Municipal de los Deportes.",
+      "acta": {
+        "arbitros": "Pendiente de publicación",
+        "exclusiones": "Pendiente de publicación",
+        "maximosGoleadores": "Pendiente de publicación"
+      }
+    },
+    {
+      "id": "valladolid-ademar-j13",
+      "jornada": 13,
+      "competicion": "Liga NEXUS ENERGÍA ASOBAL",
+      "fecha": "2026-12-12T18:00:00+01:00",
+      "local": "Recoletas Salud At. Valladolid",
+      "visitante": "ABANCA Ademar León",
+      "escudoLocal": null,
+      "escudoVisitante": "assets/images/logo.png",
+      "pabellon": "Pabellón Huerta del Rey",
+      "ciudad": "Valladolid",
+      "estado": "proximo",
+      "marcador": null,
+      "cronica": "Encuentro de la jornada 13 en Valladolid.",
+      "acta": {
+        "arbitros": "Pendiente de publicación",
+        "exclusiones": "Pendiente de publicación",
+        "maximosGoleadores": "Pendiente de publicación"
+      }
+    },
+    {
+      "id": "barca-ademar-j14",
+      "jornada": 14,
+      "competicion": "Liga NEXUS ENERGÍA ASOBAL",
+      "fecha": "2026-12-19T18:00:00+01:00",
+      "local": "Barça",
+      "visitante": "ABANCA Ademar León",
+      "escudoLocal": null,
+      "escudoVisitante": "assets/images/logo.png",
+      "pabellon": "Palau Blaugrana",
+      "ciudad": "Barcelona",
+      "estado": "proximo",
+      "marcador": null,
+      "cronica": "Encuentro de la jornada 14 en el Palau Blaugrana.",
+      "acta": {
+        "arbitros": "Pendiente de publicación",
+        "exclusiones": "Pendiente de publicación",
+        "maximosGoleadores": "Pendiente de publicación"
+      }
+    },
+    {
+      "id": "torrelavega-ademar-j9",
+      "jornada": 9,
+      "competicion": "Liga NEXUS ENERGÍA ASOBAL",
+      "fecha": "2026-11-14T18:00:00+01:00",
+      "local": "Bathco BM. Torrelavega",
+      "visitante": "ABANCA Ademar León",
+      "escudoLocal": "assets/images/logo-torrelavega.png",
+      "escudoVisitante": "assets/images/logo.png",
+      "pabellon": "Pabellón Vicente Trueba",
+      "ciudad": "Torrelavega",
+      "estado": "finalizado",
+      "marcador": {
+        "local": 37,
+        "visitante": 27
+      },
+      "cronica": "Bathco BM. Torrelavega se impuso por 37-27 al ABANCA Ademar León en la jornada 9 de Liga.",
+      "acta": {
+        "arbitros": "Acta oficial pendiente de integración",
+        "exclusiones": "Sin datos disponibles",
+        "maximosGoleadores": "Consulta la ficha individual de ASOBAL"
+      }
+    },
+    {
+      "id": "ademar-bidasoa-j8",
+      "jornada": 8,
+      "competicion": "Liga NEXUS ENERGÍA ASOBAL",
+      "fecha": "2026-10-31T18:00:00+01:00",
+      "local": "ABANCA Ademar León",
+      "visitante": "IRUDEK Bidasoa Irun",
+      "escudoLocal": "assets/images/logo.png",
+      "escudoVisitante": null,
+      "pabellon": "Palacio Municipal de los Deportes de León",
+      "ciudad": "León",
+      "estado": "finalizado",
+      "marcador": {
+        "local": 33,
+        "visitante": 37
+      },
+      "cronica": "IRUDEK Bidasoa Irun ganó por 33-37 en el Palacio Municipal de los Deportes.",
+      "acta": {
+        "arbitros": "Acta oficial pendiente de integración",
+        "exclusiones": "Sin datos disponibles",
+        "maximosGoleadores": "Consulta la ficha individual de ASOBAL"
+      }
+    },
+    {
+      "id": "alicante-ademar-j7",
+      "jornada": 7,
+      "competicion": "Liga NEXUS ENERGÍA ASOBAL",
+      "fecha": "2026-10-25T18:00:00+02:00",
+      "local": "HORNEO BM. Alicante",
+      "visitante": "ABANCA Ademar León",
+      "escudoLocal": null,
+      "escudoVisitante": "assets/images/logo.png",
+      "pabellon": "Pitiu Rochel",
+      "ciudad": "Alicante",
+      "estado": "finalizado",
+      "marcador": {
+        "local": 32,
+        "visitante": 35
+      },
+      "cronica": "El ABANCA Ademar León venció 32-35 a HORNEO BM. Alicante en la jornada 7.",
+      "acta": {
+        "arbitros": "Acta oficial pendiente de integración",
+        "exclusiones": "Sin datos disponibles",
+        "maximosGoleadores": "Consulta la ficha individual de ASOBAL"
+      }
+    }
+  ]
+}

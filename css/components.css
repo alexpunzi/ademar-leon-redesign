@@ -642,6 +642,350 @@
   }
 }
 
+/* Estados y componentes para las vistas basadas en JSON */
+  .data-message {
+    color: var(--color-text-muted);
+    padding: 1.5rem 0;
+  }
+
+  .news-main,
+  .news-item-sm {
+    overflow: hidden;
+  }
+
+  .news-item-sm > a {
+    display: block;
+  }
+
+  .news-item-sm img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin-bottom: 1.25rem;
+  }
+
+  .news-item-sm .date,
+  .news-item-sm h3,
+  .news-item-sm p {
+    display: block;
+    margin-inline: 1.25rem;
+  }
+
+  .news-item-sm p {
+    margin-bottom: 1.25rem;
+  }
+
+  .news-filters,
+  .roster-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .news-filters label,
+  .local-form label {
+    display: grid;
+    gap: 0.45rem;
+    color: var(--color-white);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .news-filters select,
+  .local-form input,
+  .local-form select,
+  .local-form textarea {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: #111;
+    color: var(--color-white);
+  }
+
+  .news-filters select {
+    min-width: 12rem;
+  }
+
+  .local-form {
+    display: grid;
+    gap: 1.2rem;
+    width: 100%;
+  }
+
+  .local-form textarea {
+    resize: vertical;
+  }
+
+  .local-form .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-weight: 400;
+  }
+
+  .local-form .checkbox-label input {
+    width: 1.1rem;
+    min-height: 1.1rem;
+    margin-top: 0.2rem;
+    accent-color: var(--color-red);
+  }
+
+  .form-feedback {
+    min-height: 1.5rem;
+    color: #a7f3d0;
+  }
+
+  .form-feedback.is-error {
+    color: #fecaca;
+  }
+
+  .secondary-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+  }
+
+  .roster-filters button {
+    padding: 0.65rem 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .roster-filters button:hover,
+  .roster-filters button.is-active {
+    border-color: var(--color-red);
+    color: var(--color-white);
+  }
+
+  .player-card {
+    grid-column: span 4;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .player-card-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .player-photo {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    background: #171717;
+  }
+
+  .player-info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.4rem 1rem;
+    align-items: baseline;
+    padding: 1.25rem;
+  }
+
+  .player-info h3 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    font-size: clamp(1.3rem, 2vw, 1.8rem);
+    line-height: 1.15;
+  }
+
+  .player-number {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    color: var(--color-red);
+    font: 900 2.5rem/1 var(--font-display);
+  }
+
+  .stats-mini {
+    grid-column: 2;
+    color: #ff6b70;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .staff-card {
+    grid-column: span 6;
+  }
+
+  .staff-role {
+    color: #ff6b70;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .staff-card h3 {
+    margin-top: 0.75rem;
+    line-height: 1.15;
+  }
+
+  .player-dialog {
+    width: min(94vw, 760px);
+    max-height: 90vh;
+    margin: auto;
+    padding: clamp(1.25rem, 4vw, 3rem);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 5px solid var(--color-red);
+    background: var(--color-carbon);
+    color: var(--color-white);
+  }
+
+  .player-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.82);
+  }
+
+  .player-dialog-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    color: var(--color-white);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .player-detail-photo {
+    width: 100%;
+    max-height: 24rem;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+  }
+
+  .player-facts,
+  .match-acta {
+    margin: 1.5rem 0;
+  }
+
+  .player-facts div,
+  .match-acta div {
+    display: grid;
+    grid-template-columns: minmax(8rem, 1fr) 2fr;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .player-facts dt,
+  .match-acta dt {
+    color: var(--color-white);
+    font-weight: 700;
+  }
+
+  .player-facts dd,
+  .match-acta dd {
+    color: var(--color-text-muted);
+  }
+
+  .player-socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .match-detail-score {
+    margin: 3rem 0;
+    padding: 2rem 0;
+    border-block: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+
+  .match-score {
+    font: 900 clamp(3rem, 12vw, 7rem)/1.15 var(--font-display);
+    letter-spacing: 0.04em;
+  }
+
+  .match-score span {
+    color: var(--color-red);
+  }
+
+  .match-detail-score p {
+    margin: 1rem auto 0;
+    text-transform: capitalize;
+  }
+
+  .match-detail-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .match-detail-columns section:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .news-detail {
+    max-width: 900px;
+  }
+
+  .news-detail-image {
+    width: 100%;
+    max-height: 34rem;
+    margin: 2rem 0;
+    object-fit: cover;
+  }
+
+  .news-detail-copy p {
+    margin: 1rem 0;
+  }
+
+  .match-actions,
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .section-link-row {
+    margin-top: 2rem;
+  }
+
+  .team-shield-placeholder {
+    display: grid;
+    place-items: center;
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: var(--color-white);
+    font: 900 1.5rem/1 var(--font-display);
+  }
+
+  @media (max-width: 900px) {
+    .player-card,
+    .staff-card {
+      grid-column: span 6;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .player-card,
+    .staff-card,
+    .match-detail-columns section,
+    .match-detail-columns section:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .player-facts div,
+    .match-acta div {
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+    }
+  }
 /* Modal editorial para integraciones externas */
 .nexo-modal {
   position: fixed;

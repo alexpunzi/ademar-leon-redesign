@@ -143,7 +143,7 @@ h6 {
   font-family: var(--font-heading);
   text-transform: uppercase;
   font-weight: 700;
-  line-height: 0.95;
+  line-height: 1.12;
   color: var(--color-text-light);
   margin-bottom: var(--space-sm);
   letter-spacing: 0.02em;
@@ -154,15 +154,20 @@ h6 {
 h1 {
   font-size: clamp(4rem, 8vw, 8rem);
   font-weight: 900; /* Extra impacto */
-  letter-spacing: 0.01em;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
 }
 
 h2 {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.12;
+  letter-spacing: 0.04em;
 }
 
 h3 {
   font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.12;
+  letter-spacing: 0.03em;
 }
 
 h4 {

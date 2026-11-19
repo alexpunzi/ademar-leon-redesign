@@ -62,13 +62,14 @@
 
 /* Mobile Pequeño (Hasta 767px) */
 @media (max-width: 767px) {
-  .header-actions .btn {
+  .header-actions .btn,
+  .header-actions .btn-elite {
     display: none; /* Ocultamos el CTA en móvil para dar prioridad al menú y la marca */
   }
 }
 
 /* Móvil y tablet compacta (hasta 900px) - Gestión del menú */
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .main-nav {
     position: fixed;
     top: 88px;
@@ -105,7 +106,7 @@ body.has-overlay-open {
 }
 
 /* Escritorio compacto: navegación completa desde el ancho de portátil */
-@media (min-width: 901px) {
+@media (min-width: 1201px) {
   .mobile-menu-toggle {
     display: none; /* Ocultamos explícitamente el botón toggle en escritorio */
   }
@@ -115,7 +116,7 @@ body.has-overlay-open {
 }
 
 /* Escritorio amplio */
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
   .site-header,
   .header-container {
     height: 104px;
@@ -194,7 +195,7 @@ body.has-overlay-open {
 }
 
 /* Ajuste específico de altura a partir de Desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
   .hero-section {
     padding-top: 104px; /* Sincronizado con la altura expandida del header */
   }
@@ -470,5 +471,15 @@ body.has-overlay-open {
   /* Ajuste tipográfico extremo para que los marcadores no desborden */
   .match-status {
     font-size: 2.25rem;
+  }
+
+  .section-padding {
+    padding: 7rem 0 4rem;
+  }
+
+  .text-huge {
+    font-size: clamp(2.9rem, 13vw, 5rem);
+    letter-spacing: 0.03em;
+    padding-top: 0.14em;
   }
 }

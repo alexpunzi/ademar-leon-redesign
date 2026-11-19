@@ -27,12 +27,14 @@
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="partidos.html">Partidos</a></li>
                     <li><a href="plantilla-equipo.html">Plantilla</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
                     <li><a href="club.html" class="is-active" aria-current="page">El Club</a></li>
                     <li><a href="aficion.html">Afición</a></li>
+                    <li><a href="empresas.html">Empresas</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <a href="aficion.html" class="btn-elite">Hazte socio</a>
+                <a href="aficion.html#alta-socio" class="btn-elite">Hazte socio</a>
             </div>
         </div>
     </header>
@@ -84,7 +86,6 @@
                         <p class="text-white">1998/99 · 2004/05</p>
                     </article>
                 </div>
-                <p class="text-white honours-note">Títulos de campeón recogidos en la historia oficial del club. No se cuentan como títulos las finales disputadas.</p>
             </div>
         </section>
 
@@ -104,10 +105,9 @@
                             <div><dt>Dirección</dt><dd>Av. del Ingeniero Sáenz de Miera, s/n · León</dd></div>
                             <div><dt>En casa</dt><dd>Balonmano, entrenamientos y partidos del primer equipo</dd></div>
                         </dl>
-                        <a class="btn-elite" href="https://www.ademar.com/palacio-de-los-deportes/" target="_blank" rel="noopener noreferrer">Información del Palacio</a>
+                        <a class="btn-elite" href="partidos.html">Ver partidos en el Palacio</a>
                     </div>
                 </div>
-                <p class="source-note">Fuentes: <a href="https://www.ademar.com/club/historia/" target="_blank" rel="noopener noreferrer">historia oficial del club</a> · <a href="https://asobal.es/equipos/ADE/" target="_blank" rel="noopener noreferrer">ficha ASOBAL del equipo y pabellón</a>.</p>
             </div>
         </section>
     </main>
@@ -124,19 +124,21 @@
             <ul class="footer-list">
                 <li><a href="club.html">El Club</a></li>
                 <li><a href="plantilla-equipo.html">Primer equipo</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
             </ul>
             <ul class="footer-list">
                 <li><a href="partidos.html">Calendario</a></li>
                 <li><a href="aficion.html">Socios y afición</a></li>
+                <li><a href="entradas.html">Entradas</a></li>
             </ul>
             <ul class="footer-list">
-                <li><a href="https://www.ademar.com/" target="_blank" rel="noopener noreferrer">Web oficial</a></li>
+                <li><a href="empresas.html">Empresas</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
                 <li><a href="https://twitter.com/ADEMARLEON" target="_blank" rel="noopener noreferrer">X · @ADEMARLEON</a></li>
             </ul>
         </div>
         <div class="footer-bottom">
             <p>© <span data-current-year>2026</span> ABANCA Ademar León · Todos los derechos reservados.</p>
-            <p>Información deportiva consultada el 18 de noviembre de 2026.</p>
         </div>
     </footer>
 
@@ -151,16 +153,14 @@
         .trophy { display: flex; flex-direction: column; }
         .trophy .count { font-family: var(--font-display); font-size: clamp(4rem, 8vw, 7rem); font-weight: 900; line-height: 1; }
         .trophy .label { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; }
-        .honours-note { margin-top: 2rem; }
         .venue-facts { margin: 2rem 0; }
         .venue-facts div { display: grid; grid-template-columns: minmax(7rem, 1fr) 2fr; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.15); }
         .venue-facts dt { font-weight: 700; color: var(--color-white); }
         .venue-facts dd { color: var(--color-text-muted); }
-        .source-note { margin-top: 2rem; font-size: 0.875rem; }
-        .source-note a { text-decoration: underline; text-underline-offset: 0.2em; }
         @media(max-width: 900px) { .span-6 { grid-column: span 12; } .trophy-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } .shadow-elite { box-shadow: 10px 10px 0 var(--color-blue); margin-top: 2rem; } }
         @media(max-width: 480px) { .trophy-row { grid-template-columns: 1fr; } .venue-facts div { grid-template-columns: 1fr; gap: 0.25rem; } }
     </style>
+    <script src="js/data-fallback.js" defer></script>
     <script src="js/main.js" defer></script>
 </body>
 </html>

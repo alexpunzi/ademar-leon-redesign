@@ -70,20 +70,22 @@ body {
 .text-huge {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: clamp(5rem, 15vw, 12rem);
-  line-height: 0.85;
+  font-size: clamp(3.2rem, 14vw, 12rem);
+  line-height: 1.12;
   text-transform: uppercase;
-  letter-spacing: -0.04em;
+  letter-spacing: 0.04em;
   font-stretch: 110%;
+  padding-top: 0.1em;
 }
 
 .text-title {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(2.5rem, 8vw, 6rem);
-  line-height: 0.9;
+  line-height: 1.15;
   text-transform: uppercase;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.04em;
+  padding-top: 0.08em;
 }
 
 /* Componentes Radicales */
@@ -147,4 +149,122 @@ body {
 
 .section-padding {
   padding: 10rem 0;
+}
+
+.btn-elite-red {
+  background: var(--color-red);
+  color: var(--color-white);
+}
+
+.btn-elite-red:hover {
+  background: var(--color-white);
+  color: var(--color-carbon);
+}
+
+.hero-actions {
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+.sponsors-strip {
+  padding: 6rem 0;
+  background: #141414;
+  border-block: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.sponsors-grid img {
+  width: min(100%, 18rem);
+  height: 5rem;
+}
+
+.shop-teaser,
+.ticket-layout,
+.business-form-layout,
+.membership-form-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+
+#alta-socio {
+  scroll-margin-top: 100px;
+}
+
+.business-intro {
+  max-width: 46rem;
+  margin: 2rem 0 4rem;
+}
+
+.sponsor-tiers {
+  margin-top: 2rem;
+}
+
+.sponsor-rate {
+  margin-top: 1.5rem;
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.shop-feature {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.shop-feature img {
+  width: 100%;
+  max-height: 32rem;
+  object-fit: cover;
+}
+
+.shop-request {
+  max-width: 42rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bg-white .local-form label {
+  color: var(--color-carbon);
+}
+
+.bg-white .local-form input,
+.bg-white .local-form select,
+.bg-white .local-form textarea {
+  background: #fff;
+  color: var(--color-carbon);
+  border-color: #9ca3af;
+}
+
+.bg-white .form-feedback {
+  color: #166534;
+}
+
+.bg-white .form-feedback.is-error {
+  color: #991b1b;
+}
+
+@media (max-width: 900px) {
+  .shop-teaser,
+  .ticket-layout,
+  .business-form-layout,
+  .membership-form-layout,
+  .shop-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsors-grid {
+    justify-content: flex-start;
+  }
 }

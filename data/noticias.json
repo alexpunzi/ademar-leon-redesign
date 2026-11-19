@@ -1,0 +1,56 @@
+{
+  "noticias": [
+    {
+      "id": "asamblea-general-2026",
+      "fecha": "2026-09-14",
+      "categoria": "Club",
+      "titulo": "Convocada la Asamblea General Ordinaria",
+      "resumen": "El club publicó la convocatoria para sus socios, con el balance de 2025/26 y el presupuesto de la temporada 2026/27 en el orden del día.",
+      "contenido": [
+        "El ABANCA Ademar León convoca a sus socios a la Asamblea General Ordinaria. La sesión incluye el balance de la temporada 2025/26 y la presentación del presupuesto para el curso 2026/27.",
+        "La convocatoria y la documentación de la reunión están dirigidas a los socios del club. Para participar, consulta los canales de atención del ABANCA Ademar León."
+      ],
+      "imagen": "assets/images/palacio-deportes.jpg",
+      "textoAlternativo": "Palacio Municipal de los Deportes de León"
+    },
+    {
+      "id": "campana-socios-2026",
+      "fecha": "2026-09-09",
+      "categoria": "Afición",
+      "titulo": "La campaña de socios 2026/27",
+      "resumen": "Consulta las modalidades de abono y preinscríbete como nuevo socio en la web del club.",
+      "contenido": [
+        "El club ofrece distintas modalidades de abono para seguir al equipo desde el Palacio Municipal de los Deportes.",
+        "En esta web puedes iniciar la preinscripción de nuevo socio. La disponibilidad, el precio final y la formalización del abono quedan sujetos a la confirmación del club."
+      ],
+      "imagen": "assets/images/palacio-deportes.jpg",
+      "textoAlternativo": "Gradas del Palacio Municipal de los Deportes"
+    },
+    {
+      "id": "equipacion-2026",
+      "fecha": "2026-08-21",
+      "categoria": "Primer equipo",
+      "titulo": "Presentada la equipación 2026/27",
+      "resumen": "El equipo presentó su nueva imagen para una temporada marcada por el 70 aniversario del club.",
+      "contenido": [
+        "El ABANCA Ademar León presentó la equipación de la temporada 2026/27, un curso especial en el que el club celebra siete décadas de historia.",
+        "Consulta la sección de tienda para solicitar información sobre disponibilidad y tallas."
+      ],
+      "imagen": "assets/images/presentacion-ropa.jpg",
+      "textoAlternativo": "Presentación de ropa del ABANCA Ademar León"
+    },
+    {
+      "id": "acuerdo-salud-2026",
+      "fecha": "2026-08-07",
+      "categoria": "Club",
+      "titulo": "Nuevo acuerdo de salud y rendimiento",
+      "resumen": "Cardio León y el Hospital San Juan de Dios se incorporaron al seguimiento médico del equipo.",
+      "contenido": [
+        "Cardio León y el Hospital San Juan de Dios colaboran con el ABANCA Ademar León en el seguimiento médico y deportivo del primer equipo.",
+        "El acuerdo refuerza el trabajo de prevención, evaluación y cuidado de los jugadores durante la temporada."
+      ],
+      "imagen": "assets/images/acuerdo-hospital.jpeg",
+      "textoAlternativo": "Acuerdo de colaboración en salud y rendimiento"
+    }
+  ]
+}

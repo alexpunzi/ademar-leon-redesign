@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-labelledby="title">
+  <title id="title">Silueta deportiva</title>
+  <rect width="640" height="440" fill="#171717"/>
+  <path d="M0 350 640 145v295H0z" fill="#252525"/>
+  <circle cx="320" cy="145" r="67" fill="#a3a3a3"/>
+  <path d="M187 440c10-113 58-181 133-181s123 68 133 181H187z" fill="#777"/>
+  <path d="M187 440c10-113 58-181 133-181v181H187z" fill="#e21e26"/>
+  <path d="m279 277 41 37 41-37 25 163H254z" fill="#171717"/>
+  <path d="m75 52 126 36-9 31L66 82zM468 332l105 40-12 30-105-40z" fill="#e21e26" opacity=".8"/>
+</svg>

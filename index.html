@@ -27,12 +27,14 @@
                     <li><a href="index.html" class="is-active" aria-current="page">Inicio</a></li>
                     <li><a href="partidos.html">Partidos</a></li>
                     <li><a href="plantilla-equipo.html">Plantilla</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
                     <li><a href="club.html">El Club</a></li>
                     <li><a href="aficion.html">Afición</a></li>
+                    <li><a href="empresas.html">Empresas</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <a href="aficion.html" class="btn-elite">Hazte socio</a>
+                <a href="aficion.html#alta-socio" class="btn-elite">Hazte socio</a>
             </div>
         </div>
     </header>
@@ -49,7 +51,10 @@
                 </h1>
                 <div class="hero-cta-group">
                     <p class="hero-lead">Setenta años de balonmano, ciudad y carácter.</p>
-                    <a href="partidos.html" class="btn-elite">Ver el calendario</a>
+                    <div class="hero-actions">
+                        <a href="partidos.html" class="btn-elite">Ver el calendario</a>
+                        <a href="aficion.html#alta-socio" class="btn-elite btn-elite-red">Hazte socio</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -60,25 +65,12 @@
                     <p class="tag-red">PRÓXIMO ENCUENTRO · LIGA ASOBAL</p>
                     <h2 class="text-title" id="next-match-title">LA PRÓXIMA CITA</h2>
                 </div>
-                <article class="match-card is-upcoming card-elite" data-match-card aria-label="Próximo partido del ABANCA Ademar León">
-                    <div class="match-team">
-                        <img src="https://www.ademar.com/wp-content/uploads/2020/08/LOG-70x70.png" alt="Escudo de Dicorpebal Logroño La Rioja" class="team-shield">
-                        <span class="team-name">Dicorpebal Logroño La Rioja</span>
-                    </div>
-                    <div class="match-details">
-                        <span class="match-competition">Jornada 10 · Liga NEXUS ENERGÍA ASOBAL</span>
-                        <time class="match-date" datetime="2026-11-21T19:00:00+01:00">Sábado, 21 de noviembre · 19:00</time>
-                        <p class="match-venue">Palacio de los Deportes de La Rioja · Logroño</p>
-                        <p class="match-status">VS</p>
-                        <div class="match-countdown" data-countdown aria-live="polite"></div>
-                    </div>
-                    <div class="match-team">
-                        <img src="assets/images/logo.png" alt="Escudo del ABANCA Ademar León" class="team-shield">
-                        <span class="team-name">ABANCA Ademar León</span>
-                    </div>
+                <article class="match-card is-upcoming card-elite" data-match-card data-next-match-card aria-label="Próximo partido del ABANCA Ademar León">
+                    <p class="data-message">Cargando próximo partido…</p>
                 </article>
                 <div class="match-actions">
                     <a href="partidos.html" class="btn-elite">Todos los partidos</a>
+                    <a href="entradas.html" class="btn-elite btn-elite-red">Entradas</a>
                 </div>
             </div>
         </section>
@@ -86,71 +78,57 @@
         <section class="section-padding bg-white" aria-labelledby="news-title">
             <div class="section-container">
                 <h2 class="text-title mb-lg" id="news-title">ACTUALIDAD DEL CLUB</h2>
-                <div class="magazine-grid">
-                    <div class="span-8">
-                        <article class="news-main card-elite">
-                            <a href="https://www.ademar.com/convocatoria-asamblea-general-ordinaria-del-cub/" target="_blank" rel="noopener noreferrer">
-                                <img src="assets/images/palacio-deportes.jpg" alt="Palacio Municipal de los Deportes de León">
-                                <div class="p-md">
-                                    <span class="tag-red">CLUB · 14 SEPTIEMBRE 2026</span>
-                                    <h3 class="text-title-sm text-white">CONVOCADA LA ASAMBLEA GENERAL ORDINARIA</h3>
-                                    <p class="text-white opacity-80">El club publicó la convocatoria para sus socios, con el balance de 2025/26 y el presupuesto de la temporada 2026/27 en el orden del día.</p>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                    <div class="span-4">
-                        <div class="news-list">
-                            <article class="news-item-sm card-elite mb-sm">
-                                <a href="https://www.ademar.com/continuamos-con-la-campana-de-socios-2026-2027/" target="_blank" rel="noopener noreferrer">
-                                    <span class="date text-red">09 SEP 2026 · AFICIÓN</span>
-                                    <h3 class="text-white">SIGUE ACTIVA LA CAMPAÑA DE SOCIOS 2026/27</h3>
-                                    <p class="text-white opacity-80">La promoción del 70 aniversario permite a socios que renuevan invitar a una persona elegible a la zona de Fondo.</p>
-                                </a>
-                            </article>
-                            <article class="news-item-sm card-elite mb-sm">
-                                <a href="https://www.ademar.com/el-abanca-ademar-presenta-su-nueva-piel/" target="_blank" rel="noopener noreferrer">
-                                    <span class="date text-red">21 AGO 2026 · PRIMER EQUIPO</span>
-                                    <h3 class="text-white">PRESENTADA LA EQUIPACIÓN 2026/27</h3>
-                                    <p class="text-white opacity-80">El equipo estrenó su nueva imagen para una temporada marcada por el 70 aniversario.</p>
-                                </a>
-                            </article>
-                            <article class="news-item-sm card-elite">
-                                <a href="https://www.ademar.com/el-nuevo-acuerdo-entre-abanca-ademar-cardio-leon-y-el-hospital-san-juan-de-dios-comienza-a-dar-sus-primeros-pasos/" target="_blank" rel="noopener noreferrer">
-                                    <span class="date text-red">07 AGO 2026 · CLUB</span>
-                                    <h3 class="text-white">NUEVO ACUERDO DE SALUD Y RENDIMIENTO</h3>
-                                    <p class="text-white opacity-80">Cardio León y el Hospital San Juan de Dios se incorporaron al trabajo de seguimiento médico del equipo.</p>
-                                </a>
-                            </article>
-                        </div>
-                    </div>
+                <div class="magazine-grid" data-home-news aria-live="polite">
+                    <p class="data-message">Cargando actualidad…</p>
                 </div>
-                <p class="source-note">Noticias y fechas: <a href="https://www.ademar.com/noticias/" target="_blank" rel="noopener noreferrer">hemeroteca oficial del club</a>.</p>
+                <div class="section-link-row"><a href="noticias.html" class="view-all-link">Toda la actualidad <span aria-hidden="true">→</span></a></div>
             </div>
         </section>
 
         <section class="section-padding" aria-labelledby="season-title">
             <div class="section-container">
-                <p class="tag-red">LIGA NEXUS ENERGÍA ASOBAL · TRAS 9 JORNADAS</p>
+                <p class="tag-red" data-standing-caption>LIGA NEXUS ENERGÍA ASOBAL</p>
                 <h2 class="text-title mb-lg" id="season-title">EL CURSO, EN CIFRAS</h2>
                 <div class="magazine-grid">
                     <article class="span-4 card-elite stat-card">
-                        <span class="stat-value">09.º</span>
+                        <span class="stat-value" data-standing="puesto">—</span>
                         <h3 class="text-title-sm">EN LA CLASIFICACIÓN</h3>
-                        <p>6 puntos · 3 victorias · 6 derrotas.</p>
+                        <p><span data-standing="puntos">—</span> puntos · <span data-standing="victorias">—</span> victorias · <span data-standing="derrotas">—</span> derrotas.</p>
                     </article>
                     <article class="span-4 card-elite stat-card">
-                        <span class="stat-value">307—320</span>
+                        <span class="stat-value"><span data-standing="golesFavor">—</span>—<span data-standing="golesContra">—</span></span>
                         <h3 class="text-title-sm">GOLES</h3>
-                        <p>307 a favor, 320 en contra · diferencia −13.</p>
+                        <p><span data-standing="golesFavor">—</span> a favor, <span data-standing="golesContra">—</span> en contra · diferencia <span data-standing="diferencia">—</span>.</p>
                     </article>
                     <article class="span-4 card-elite stat-card">
-                        <span class="stat-value">80</span>
-                        <h3 class="text-title-sm">GOLES DE GONZALO PÉREZ</h3>
-                        <p>Máximo goleador ademarista en la estadística acumulada de ASOBAL consultada.</p>
+                        <span class="stat-value" data-standing="golesMaximoGoleador">—</span>
+                        <h3 class="text-title-sm">GOLES DE <span data-standing="maximoGoleador">—</span></h3>
+                        <p>Máximo goleador ademarista de la temporada.</p>
                     </article>
                 </div>
-                <p class="source-note">Estadísticas a 18 de noviembre de 2026, con los datos publicados tras la jornada 9. <a href="https://asobal.es/liga/clasificacion/" target="_blank" rel="noopener noreferrer">Clasificación ASOBAL</a> · <a href="https://asobal.es/equipos/ADE/" target="_blank" rel="noopener noreferrer">Estadística del equipo</a>.</p>
+            </div>
+        </section>
+
+        <section class="sponsors-strip" aria-labelledby="sponsors-title">
+            <div class="section-container">
+                <p class="tag-red">UN EQUIPO, MUCHOS ALIADOS</p>
+                <h2 class="text-title" id="sponsors-title">JUNTOS SOMOS MÁS</h2>
+                <div class="sponsors-grid" aria-label="Patrocinadores y colaboradores">
+                    <img src="assets/images/sponsors/main-sponsor.svg" alt="Espacio reservado para el patrocinador principal">
+                    <img src="assets/images/sponsors/official-sponsor.svg" alt="Espacio reservado para patrocinador oficial">
+                    <img src="assets/images/sponsors/collaborator.svg" alt="Espacio reservado para entidad colaboradora">
+                </div>
+                <a href="empresas.html" class="view-all-link">Haz equipo con nosotros <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white" aria-labelledby="shop-title">
+            <div class="section-container shop-teaser">
+                <div>
+                    <p class="tag-red">EQUIPACIÓN Y MERCHANDISING</p>
+                    <h2 class="text-title" id="shop-title">VISTE LOS COLORES</h2>
+                </div>
+                <a href="tienda.html" class="btn-elite">Ver tienda</a>
             </div>
         </section>
 
@@ -168,19 +146,21 @@
             <ul class="footer-list">
                 <li><a href="club.html">El Club</a></li>
                 <li><a href="plantilla-equipo.html">Primer equipo</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
             </ul>
             <ul class="footer-list">
                 <li><a href="partidos.html">Calendario</a></li>
                 <li><a href="aficion.html">Socios y afición</a></li>
+                <li><a href="entradas.html">Entradas</a></li>
             </ul>
             <ul class="footer-list">
-                <li><a href="https://www.ademar.com/" target="_blank" rel="noopener noreferrer">Web oficial</a></li>
+                <li><a href="empresas.html">Empresas</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
                 <li><a href="https://twitter.com/ADEMARLEON" target="_blank" rel="noopener noreferrer">X · @ADEMARLEON</a></li>
             </ul>
         </div>
         <div class="footer-bottom">
             <p>© <span data-current-year>2026</span> ABANCA Ademar León · Todos los derechos reservados.</p>
-            <p>Información deportiva consultada el 18 de noviembre de 2026.</p>
         </div>
     </footer>
 
@@ -197,19 +177,18 @@
         .span-8 { grid-column: span 8; }
         .span-4 { grid-column: span 4; }
         .tag-red { background: var(--color-red); color: white; padding: 0.25rem 0.5rem; font-size: 0.8rem; font-weight: 900; display: inline-block; margin-bottom: 0.75rem; }
-        .text-title-sm { font-family: var(--font-display); font-size: 2.5rem; line-height: 1; margin: 1rem 0; }
+        .text-title-sm { font-family: var(--font-display); font-size: 2.5rem; line-height: 1.15; letter-spacing: 0.03em; margin: 1rem 0; }
         .p-md { padding: 2rem; }
         .news-main { padding: 0; overflow: hidden; }
         .news-main img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
         .news-item-sm h3 { margin: 0.75rem 0; }
-        .source-note { margin-top: 2rem; font-size: 0.875rem; }
-        .source-note a { text-decoration: underline; text-underline-offset: 0.2em; }
         .stat-card { min-height: 15rem; }
         .stat-value { display: block; color: var(--color-red); font-family: var(--font-display); font-size: clamp(3rem, 6vw, 5rem); font-weight: 900; line-height: 1; margin-bottom: 1rem; }
         @media (max-width: 900px) { .span-8, .span-4 { grid-column: span 12; } }
         @media (max-width: 767px) { .hero-container { padding-top: 9rem; } }
         @media (prefers-reduced-motion: reduce) { .card-elite { transition: none; } }
     </style>
+    <script src="js/data-fallback.js" defer></script>
     <script src="js/main.js" defer></script>
 </body>
 </html>

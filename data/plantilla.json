@@ -1,0 +1,31 @@
+{
+  "temporada": "2026/27",
+  "jugadores": [
+    {"id":"ivan-hernandez","nombre":"Iván Hernández Mayo","dorsal":12,"posicion":"Portero","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"alvaro-perez","nombre":"Álvaro Pérez Méndez","dorsal":14,"posicion":"Portero","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"marcos-garcia","nombre":"Marcos García Peñacoba","dorsal":98,"posicion":"Portero","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"mario-blanco","nombre":"Mario Blanco de Paz","dorsal":4,"posicion":"Extremo","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"adrian-casqueiro","nombre":"Adrián Casqueiro López","dorsal":5,"posicion":"Extremo","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"martin-robles","nombre":"Martín Robles Franco","dorsal":11,"posicion":"Extremo","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"alvaro-duarte","nombre":"Álvaro Duarte Zapico","dorsal":17,"posicion":"Extremo","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"gonzalo-perez","nombre":"Gonzalo Pérez Arce","dorsal":19,"posicion":"Extremo","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"raul-garcia","nombre":"Raúl García Llamazares","dorsal":21,"posicion":"Extremo","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"oscar-lindqvist","nombre":"Óscar Daniel Lindqvist","dorsal":2,"posicion":"Lateral","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"patryk-wasiak","nombre":"Patryk Radoslaw Wasiak","dorsal":7,"posicion":"Lateral","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"alex-lodos","nombre":"Álex Lodos García","dorsal":23,"posicion":"Lateral","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"eduardo-fernandez","nombre":"Eduardo Fernández González","dorsal":66,"posicion":"Lateral","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"javier-minambres","nombre":"Javier Miñambres Calvo","dorsal":3,"posicion":"Central","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"oscar-diez","nombre":"Óscar Díez Sánchez","dorsal":18,"posicion":"Central","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"juan-castro","nombre":"Juan Castro Álvarez","dorsal":31,"posicion":"Central","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"ruben-rozada","nombre":"Rubén Rozada Doval","dorsal":13,"posicion":"Pivote","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"alberto-martin","nombre":"Alberto Martín Botet","dorsal":33,"posicion":"Pivote","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}},
+    {"id":"rodrigo-benites","nombre":"Rodrigo Benites Quost","dorsal":73,"posicion":"Pivote","fechaNacimiento":null,"nacionalidad":null,"ciudadNatal":null,"foto":null,"redes":{}}
+  ],
+  "cuerpoTecnico": [
+    {"nombre":"Luis Puertas Castrillo","cargo":"Entrenador"},
+    {"nombre":"Pablo Balo Lozano","cargo":"Ayudante de entrenador"},
+    {"nombre":"Raúl García Quiñones","cargo":"Preparador físico"},
+    {"nombre":"Miguel García Bueno","cargo":"Encargado del material"},
+    {"nombre":"Pablo Castro Álvarez","cargo":"Delegado"}
+  ]
+}

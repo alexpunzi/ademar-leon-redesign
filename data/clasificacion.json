@@ -1,0 +1,18 @@
+{
+  "temporada": "2026/27",
+  "competicion": "Liga NEXUS ENERGÍA ASOBAL",
+  "jornadaActual": 9,
+  "actualizado": "2026-11-18",
+  "equipo": {
+    "nombre": "ABANCA Ademar León",
+    "puesto": 9,
+    "puntos": 6,
+    "victorias": 3,
+    "empates": 0,
+    "derrotas": 6,
+    "golesFavor": 307,
+    "golesContra": 320,
+    "maximoGoleador": "Gonzalo Pérez",
+    "golesMaximoGoleador": 80
+  }
+}

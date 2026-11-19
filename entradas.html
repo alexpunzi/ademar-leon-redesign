@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta partidos y prepara tu solicitud de entradas del ABANCA Ademar León.">
+    <title>ENTRADAS | ABANCA ADEMAR LEÓN</title>
+    <link rel="stylesheet" href="css/main.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/elite.css">
+</head>
+<body class="elite-mode">
+    <header class="site-header"><div class="header-container">
+        <a href="index.html" class="logo-link" aria-label="ABANCA Ademar León, inicio"><img src="assets/images/logo.png" alt="Escudo del ABANCA Ademar León" class="site-logo"></a>
+        <button class="mobile-menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menú de navegación"><span class="menu-icon" aria-hidden="true"></span></button>
+        <nav class="main-nav" id="main-navigation" aria-label="Navegación principal"><ul class="nav-list"><li><a href="index.html">Inicio</a></li><li><a href="partidos.html">Partidos</a></li><li><a href="plantilla-equipo.html">Plantilla</a></li><li><a href="noticias.html">Noticias</a></li><li><a href="club.html">El Club</a></li><li><a href="aficion.html">Afición</a></li><li><a href="empresas.html">Empresas</a></li></ul></nav>
+        <div class="header-actions"><a href="aficion.html#alta-socio" class="btn-elite">Hazte socio</a></div>
+    </div></header>
+    <main class="section-padding"><div class="section-container">
+        <p class="tag-red">TAQUILLA · TEMPORADA 2026/27</p><h1 class="text-huge">ENTRADAS</h1>
+        <div class="ticket-layout">
+            <div><p class="lead-elite">Vive el balonmano en el Palacio.</p><p>Prepara una solicitud de localidades para el partido que te interesa. La confirmación de disponibilidad y el pago se realizarán únicamente cuando el club conecte su taquilla oficial.</p><a class="view-all-link" href="partidos.html">Ver calendario completo <span aria-hidden="true">→</span></a></div>
+            <form class="local-form" method="post" data-local-form="ticket">
+                <label>Partido<select name="partido" data-ticket-match required><option value="">Cargando partidos…</option></select></label>
+                <label>Nombre y apellidos<input name="nombre" autocomplete="name" required></label>
+                <label>Correo electrónico<input name="email" type="email" autocomplete="email" required></label>
+                <label>Número de entradas<input name="cantidad" type="number" min="1" max="10" value="1" required></label>
+                <label>Zona preferida<select name="zona" required><option value="">Selecciona zona</option><option>Tribuna</option><option>Preferencia</option><option>Grada numerada</option><option>Fondo</option></select></label>
+                <label class="checkbox-label"><input type="checkbox" name="privacidad" required> Acepto que se utilicen estos datos para gestionar mi solicitud.</label>
+                <button class="btn-elite" type="submit">Preparar solicitud</button><p class="form-feedback" data-form-feedback role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div></main>
+    <footer class="site-footer"><div class="footer-container"><div class="footer-brand"><a href="index.html" class="footer-logo-link" aria-label="Volver al inicio"><img src="assets/images/logo.png" alt="ABANCA Ademar León" class="footer-logo"></a><p>Club de Balonmano ABANCA Ademar León.<br>León · Desde 1956.</p><p>Estudio NEXO — Rediseño conceptual.</p></div><ul class="footer-list"><li><a href="club.html">El Club</a></li><li><a href="plantilla-equipo.html">Primer equipo</a></li><li><a href="noticias.html">Noticias</a></li></ul><ul class="footer-list"><li><a href="partidos.html">Calendario</a></li><li><a href="aficion.html">Socios y afición</a></li><li><a href="entradas.html">Entradas</a></li></ul><ul class="footer-list"><li><a href="empresas.html">Empresas</a></li><li><a href="tienda.html">Tienda</a></li><li><a href="https://twitter.com/ADEMARLEON" target="_blank" rel="noopener noreferrer">X · @ADEMARLEON</a></li></ul></div><div class="footer-bottom"><p>© <span data-current-year>2026</span> ABANCA Ademar León · Todos los derechos reservados.</p></div></footer>
+    <script src="js/data-fallback.js" defer></script><script src="js/main.js" defer></script>
+</body>
+</html>
